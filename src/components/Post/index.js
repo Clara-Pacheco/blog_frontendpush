@@ -1,18 +1,12 @@
-export function Post(){
+export function Post({subtitle,title,children}){
   
   return (
     <div className="post mx-2">
       <div className="img-post"></div>
-      <h5>Tecnologia</h5>
-      <h3>O guia definitivo do Blog</h3>
-      <p> Lorem ipsum dolor sit amet. Aut esse omnis qui quam
-        necessitatibus aut quaerat officiis eos sequi quasi?
-        Sit deserunt tempora et laborum praesentium est earum
-        fuga est libero Quis ut unde cumque sed earum odio.
-        Id autem rerum aut expedita quidem sit iure ipsum
-        est omnis nemo eum velit repudiandae. Aut quas quia
-        et aliquam laborum est nesciunt modi aut mollitia
-        aperiam est natus sapiente ut veniam fugiat in laborum enim.
+      <h5>{subtitle}</h5>
+      <h3>{title}</h3>
+      <p className="mt-1"> 
+        {children}
         </p>
         <div className="flex pt-3">
           <div className="img-profile"></div>
@@ -24,3 +18,7 @@ export function Post(){
     </div>
   );
 }
+
+// Quando passamos o conteúdo dentro da tag de abertura e fechamento de chamada
+// do componente, a propriedade que devemos acessar no objeto enviado no contrutor
+// do componente é a propriedade 'children'.
