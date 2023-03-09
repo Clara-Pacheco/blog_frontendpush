@@ -731,4 +731,11 @@ li {
 
 .container-posts {
   display: flex;
+}
+
+button {
+  padding: 8px;
+  background-color: #F5F7F7;
+  border: 0;
+  border-radius: 4px;
 }/*# sourceMappingURL=style.css.map */

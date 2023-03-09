@@ -3,11 +3,22 @@ import { Post } from '../../components/Post'
 
 
 export function Main(){
+
+  async function handleAxios() {
+    const response =  await api.get('/posts')
+    console.log(response.data)
+  }
+
+
+
   return (
     <>
-    
-    <h1>Main.js</h1>
-    
+
+    <section className ="container">
+      <h1>Main.js</h1>
+      <button onClick={handleAxios}> Fazer requisição </button>
+    </section>
+
     </>
 
 
