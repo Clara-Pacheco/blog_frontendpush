@@ -10,6 +10,7 @@ export function Main(){
 
     try {
       const response =  await api.get('/posts')
+      console.log(response.data)
       setPost(response.data)
     }catch(error) {
       console.log(error)
@@ -23,6 +24,19 @@ export function Main(){
     <section className ="container">
       <h1>Main.js</h1>
       <button onClick={handleAxios}> Fazer requisição </button>
+
+      <div className='mt-5 container-posts'>
+        {
+          post.map(({id,category, title, resume})=>{
+              return (
+                <Post key={id} subtitle={category} title={title}>
+                  {resume}
+                </Post>
+              )
+          })
+        }
+
+      </div>
     </section>
 
     </>
