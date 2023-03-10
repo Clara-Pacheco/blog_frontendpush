@@ -10,7 +10,6 @@ export function Main(){
 
     try {
       const response =  await api.get('/posts')
-      console.log(response.data)
       setPost(response.data)
     }catch(error) {
       console.log(error)
@@ -27,10 +26,15 @@ export function Main(){
 
       <div className='mt-5 container-posts'>
         {
-          post.map(({id,category, title, resume})=>{
+          post.map(({id,category, title, resume, author, date})=>{
               return (
-                <Post key={id} subtitle={category} title={title}>
-                  {resume}
+                <Post 
+                key={id}
+                subtitle={category}
+                title={title}
+                author={author}
+                date={date}>
+                     {resume}
                 </Post>
               )
           })

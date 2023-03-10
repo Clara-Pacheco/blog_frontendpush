@@ -1,4 +1,4 @@
-export function Post({subtitle,title,children}){
+export function Post({subtitle,title,children, author, date}){
   
   return (
     <div className="post mx-2">
@@ -11,8 +11,8 @@ export function Post({subtitle,title,children}){
         <div className="flex pt-3">
           <div className="img-profile"></div>
           <div className="description-profile mt-2 ml-2">
-            <h6 className="color-blue">Fulano de Tal</h6>
-            <p>Aug2, 2020 - 8 min read</p>
+            <h6 className="color-blue">{author}</h6>
+            <p>{ date }</p>
           </div>
         </div>
     </div>
